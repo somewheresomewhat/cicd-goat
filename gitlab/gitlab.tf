@@ -33,7 +33,7 @@ resource "null_resource" "gryphon_sh" {
 resource "gitlab_user" "alice" {
   name             = "alice"
   username         = "alice"
-  password         = "ali12345"
+  password         = "ciderland5#"
   email            = "alice@wonderland.com"
   is_admin         = false
   projects_limit   = 0
