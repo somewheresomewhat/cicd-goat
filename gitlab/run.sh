@@ -34,6 +34,8 @@ terraform apply -auto-approve
 gitlab-rails runner "
 user = User.find_by_username('alice');
 user.password = 'ciderland5#';
+user.save!;
+puts 'alice password changed';
 token = user.personal_access_tokens.create(scopes: [:api, :read_repository, :write_repository, :read_registry, :write_registry], name: 'testing token');
 token.set_token('998b5802ec365e17665d832f3384e975');
 token.save!;
